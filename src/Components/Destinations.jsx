@@ -10,9 +10,7 @@ const Destinations = () => {
     fetch(`${API}/destinations`)
       .then((response) => response.json())
       .then((responseJSON) => {
-        console.log(responseJSON);
         setDestinations(responseJSON);
-        console.log(destinations)
       })
       .catch((error) => {
         console.error(error);
