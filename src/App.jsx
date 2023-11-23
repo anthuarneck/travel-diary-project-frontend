@@ -7,10 +7,12 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <AuthProvider>
         <NavBar />
         <Routes>
 
         </Routes>
+        </AuthProvider>
       </Router>
     </div>
   )
