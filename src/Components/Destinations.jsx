@@ -1,13 +1,35 @@
-import React from 'react';
+import React from "react";
+import { useState, useEffect } from "react";
+import Destination from "./Destination";
 
 const API = import.meta.env.VITE_API_URL;
 
 const Destinations = () => {
-    return (
-        <div>
-            
-        </div>
-    );
-}
+  const [destinations, setDestinations] = useState([]);
+  useEffect(() => {
+    fetch(`${API}/destinations`)
+      .then((response) => response.json())
+      .then((responseJSON) => {
+        console.log(responseJSON);
+        setDestinations(responseJSON);
+        console.log(destinations)
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
+
+
+  return (
+    <div className="Destinations">
+        <section>
+      {destinations.map((destination) => {
+        return <Destination key={destination.id} destination={destination} />;
+      })}
+      </section>
+    </div>
+  );
+};
 
 export default Destinations;

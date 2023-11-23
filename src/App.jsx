@@ -1,7 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-
+import { AuthProvider } from "./Components/UserComponents/UserContext"
 
 import NavBar from "./Components/NavBar"
+
+import Index from "./Pages/Index"
 
 function App() {
   return (
@@ -10,7 +12,7 @@ function App() {
         <AuthProvider>
         <NavBar />
         <Routes>
-
+          <Route path="/destinations" element={<Index />} />
         </Routes>
         </AuthProvider>
       </Router>
