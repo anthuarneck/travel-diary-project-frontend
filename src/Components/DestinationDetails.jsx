@@ -37,7 +37,7 @@ const DestinationDetails = () => {
         {memories.map((memory) => {
           return (
             <li>
-              <Link to={`/destinations/${id}/memories`}>
+              <Link to={`/destinations/${id}/memories/${memory.id}`}>
                 {memory.rating}<br />
                 {memory.review}
               </Link>
