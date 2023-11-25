@@ -5,6 +5,7 @@ import NavBar from "./Components/NavBar"
 
 import Index from "./Pages/Index"
 import Show from "./Pages/Show"
+import Error from "./Pages/Error"
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <Routes>
           <Route path="/destinations" element={<Index />} />
           <Route path="/destinations/:id/memories" element={<Show />} />
+
+          <Route path="*" element={<Error />} />
         </Routes>
         </AuthProvider>
       </Router>
