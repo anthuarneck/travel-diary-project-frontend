@@ -1,12 +1,13 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const API = import.meta.env.VITE_API_URL;
 
 const Memory = () => {
   const [memory, setMemory] = useState({});
   const { id, memoryId } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch(`${API}/destinations/${id}/memories/${memoryId}`)
@@ -17,13 +18,28 @@ const Memory = () => {
       .catch((error) => console.log(error));
   }, [memory]);
 
+  const handleDelete = () => {
+    deleteMemory();
+  };
+
+  const deleteMemory = () => {
+    const httpOptions = { method: "DELETE" };
+    fetch(`${API}/destinations/${id}/memories/${memoryId}`, httpOptions)
+      .then(() => {
+        navigate(`/destinations/${id}/memories`);
+      })
+      .catch((error) => console.log(error));
+  };
+
   return (
     <div className="Memory">
-      <h3>{memory.rating}</h3>
+      <h3>{memory.rating}⭐️</h3>
+      <h4>{memory.username}</h4>
       <p>{memory.date}</p>
       <p>${memory.cost}</p>
       <p>{memory.review}</p>
       <p>{memory.experiences}</p>
+      <button onClick={handleDelete}>Delete</button>
     </div>
   );
 };

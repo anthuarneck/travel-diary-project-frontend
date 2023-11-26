@@ -13,7 +13,7 @@ const LoginForm = () => {
   });
   const { user, loginUser } = useAuth();
   useEffect(() => {
-    if (user.password === userInput.password) {
+    if (user.id) {
       console.log(user, "Signed In");
       navigate(`/destinations`);
     }
@@ -24,12 +24,8 @@ const LoginForm = () => {
   };
 
   const handleSubmit = (event) => {
-    if (user.password === userInput.password && user.username === userInput.username) {
       event.preventDefault();
       loginUser(userInput);
-    } else {
-        alert("Invalid Credentials")
-    }
   };
 
   return (

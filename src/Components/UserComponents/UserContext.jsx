@@ -1,4 +1,4 @@
-import { useState, createContext, useCallback, useContext } from "react";
+import { useState, useEffect, createContext, useCallback, useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
 const API = import.meta.env.VITE_API_URL;
@@ -7,9 +7,12 @@ const AuthContext = createContext();
 export const AuthProvider = (props) => {
   const navigate = useNavigate();
   const [user, setUser] = useState({
+    id: null,
     username: false,
-    password: false,
+    password: false
   });
+
+
   const loginUser = (userInput) => {
     console.log(userInput);
     fetch(`${API}/users/`, {
@@ -19,12 +22,24 @@ export const AuthProvider = (props) => {
         "Content-Type": "application/json",
       },
     })
-      .then((response) => response.json())
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error("Login failed, Please try again");
+        }
+      })
       .then((data) => {
         setUser(data);
-        navigate(`/destinations`);
+      })
+      .catch((error) => {
+        console.error(error);
       });
   };
+  
+  useEffect(() => {
+    console.log("User data after state update:", user);
+  }, [user]);
 
   const value = {
     loginUser,

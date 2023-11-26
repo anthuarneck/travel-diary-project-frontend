@@ -64,6 +64,9 @@ const DestinationDetails = () => {
         <button>Edit</button>
       </Link>
       <button onClick={handleDelete}>Delete</button>
+      <Link to={`/destinations/${id}/memories/new`}>
+        <button>Add New Memory</button>
+      </Link>
     </article>
   );
 };
