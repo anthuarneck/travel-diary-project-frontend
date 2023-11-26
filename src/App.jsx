@@ -9,6 +9,7 @@ import ShowMemory from "./Pages/ShowMemory"
 import NewDestination from "./Pages/NewDestination"
 import EditDestination from "./Pages/EditDestination"
 import NewMemory from "./Pages/NewMemory"
+import EditMemory from "./Pages/EditMemory"
 import Error from "./Pages/Error"
 import SignUp from "./Pages/SignUp"
 import Login from "./Pages/Login"
@@ -28,6 +29,7 @@ function App() {
           <Route path="/destinations/new" element={<NewDestination />} />
           <Route path="/destinations/:id/edit" element={<EditDestination />} />
           <Route path="/destinations/:id/memories/new" element={<NewMemory />} />
+          <Route path="/destinations/:id/memories/:memoryId/edit" element={<EditMemory />} />
 
           <Route path="*" element={<Error />} />
         </Routes>
