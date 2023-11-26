@@ -53,7 +53,7 @@ const DestinationDetails = () => {
           return (
             <li>
               <Link to={`/destinations/${id}/memories/${memory.id}`}>
-                {memory.rating}<br />
+                {memory.rating}⭐️<br />
                 {memory.review}
               </Link>
             </li>
