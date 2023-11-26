@@ -9,6 +9,8 @@ import ShowMemory from "./Pages/ShowMemory"
 import NewDestination from "./Pages/NewDestination"
 import EditDestination from "./Pages/EditDestination"
 import Error from "./Pages/Error"
+import SignUp from "./Pages/SignUp"
+import Login from "./Pages/Login"
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <AuthProvider>
         <NavBar />
         <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/register" element={<SignUp />} />
           <Route path="/destinations" element={<Index />} />
           <Route path="/destinations/:id/memories" element={<Show />} />
           <Route path="/destinations/:id/memories/:memoryId" element={<ShowMemory />} />
