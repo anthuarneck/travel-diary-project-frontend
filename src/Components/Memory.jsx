@@ -13,7 +13,6 @@ const Memory = () => {
       .then((response) => response.json())
       .then((responseJSON) => {
         setMemory(responseJSON);
-        console.log(memory);
       })
       .catch((error) => console.log(error));
   }, [memory]);

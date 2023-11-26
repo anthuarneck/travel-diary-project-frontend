@@ -1,12 +1,13 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 
 const API = import.meta.env.VITE_API_URL;
 
 const DestinationDetails = () => {
   const [destination, setDestination] = useState({});
   const [memories, setMemories] = useState([]);
+  const navigate = useNavigate();
   const { id } = useParams();
 
   useEffect(() => {
@@ -27,6 +28,20 @@ const DestinationDetails = () => {
       })
       .catch((error) => console.log(error));
   }, [id]);
+
+  const handleDelete = () => {
+    deleteDestination()
+  }
+
+  const deleteDestination = () => {
+    const httpOptions = { method: "DELETE" };
+    fetch(`${API}/destinations/${id}`, httpOptions)
+      .then(() => {
+        navigate(`/destinations`);
+      })
+      .catch((error) => console.log(error));
+  };
+  
   
 
   return (
@@ -45,6 +60,10 @@ const DestinationDetails = () => {
           );
         })}
       </ul>
+      <Link to={`/destinations/${id}/edit`}>
+        <button>Edit</button>
+      </Link>
+      <button onClick={handleDelete}>Delete</button>
     </article>
   );
 };
