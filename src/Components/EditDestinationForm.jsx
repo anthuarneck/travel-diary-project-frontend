@@ -43,7 +43,7 @@ const EditDestinationForm = () => {
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
             className="mx-auto h-10 w-auto"
-            src=""
+            src="https://photojeepers.com/wp-content/uploads/2016/07/map-passport-camera-travel-planning-canva.jpg"
             alt="Travel Diary"
           />
   
@@ -51,7 +51,7 @@ const EditDestinationForm = () => {
   
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm" alt="Form">
         <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-            Add Destination
+            Edit Destination
           </h2>
           <form className="space-y-6" onSubmit={handleSubmit} method="POST">
   

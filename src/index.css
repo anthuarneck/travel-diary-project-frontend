@@ -34,6 +34,12 @@ div[alt="Signup Page"] {
   justify-content: center;
 }
 
+div[alt="New Destination Page"],
+div[alt="Edit Destination Page"] {
+  display: grid;
+  justify-content: center;
+}
+
 div[alt="Form"] {
   display: grid;
   justify-content: center;
@@ -41,6 +47,8 @@ div[alt="Form"] {
 
 .Memory {
   display: grid;
+  justify-items: start;
+  justify-content: center;
 }
 
 a {
@@ -51,8 +59,9 @@ a {
 a:hover {
   color: #ffa545;
 }
-img[alt="Travel Diary"]{
-
+img[alt="Memory Image"]{
+  max-width: 50vh;
+  box-shadow: 1px 2px 2px;
 }
 
 form fieldset input {

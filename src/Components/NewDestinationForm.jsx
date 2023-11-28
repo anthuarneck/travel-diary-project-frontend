@@ -40,7 +40,7 @@ const NewDestinationForm = () => {
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
             className="mx-auto h-10 w-auto"
-            src=""
+            src="https://photojeepers.com/wp-content/uploads/2016/07/map-passport-camera-travel-planning-canva.jpg"
             alt="Travel Diary"
           />
   
