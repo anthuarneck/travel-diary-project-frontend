@@ -33,7 +33,16 @@ const NavBar = () => {
             <Nav.Link>
                 <Link to="/destinations/new">Add a Destination</Link>
             </Nav.Link>
-            
+            {user.id ? (
+               <Nav.Link>
+               <Link to="/">Sign Out</Link>
+             </Nav.Link>
+            ) : null}
+            {!user.id ? (
+               <Nav.Link>
+               <Link to="/">Sign In</Link>
+             </Nav.Link>
+            ) : null}
           </Nav>
         </Navbar.Collapse>
       </Container>

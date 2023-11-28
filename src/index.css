@@ -13,7 +13,23 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-div[alt="Login Page"] {
+.destinationDetails {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: start;
+}
+
+.destinationDetails img {
+  box-shadow: 1px 2px 2px;
+}
+
+li {
+  list-style:square;
+}
+
+div[alt="Login Page"],
+div[alt="Signup Page"] {
   display: grid;
   justify-content: center;
 }
@@ -21,6 +37,10 @@ div[alt="Login Page"] {
 div[alt="Form"] {
   display: grid;
   justify-content: center;
+}
+
+.Memory {
+  display: grid;
 }
 
 a {

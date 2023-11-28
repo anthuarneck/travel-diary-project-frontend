@@ -14,7 +14,6 @@ export const AuthProvider = (props) => {
 
 
   const loginUser = (userInput) => {
-    console.log(userInput);
     fetch(`${API}/users/`, {
       method: "POST",
       body: JSON.stringify(userInput),
@@ -37,9 +36,9 @@ export const AuthProvider = (props) => {
       });
   };
   
-  useEffect(() => {
-    console.log("User data after state update:", user);
-  }, [user]);
+  // useEffect(() => {
+  //   console.log("User data after state update:", user);
+  // }, [user]);
 
   const value = {
     loginUser,
