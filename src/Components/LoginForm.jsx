@@ -29,26 +29,27 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+    <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8" alt="Login Page">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
         <img
           className="mx-auto h-10 w-auto"
-          src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+          src="https://sb.ecobnb.net/app/uploads/sites/3/2019/09/ross-parmly-rf6ywHVkrlY-unsplash.jpg"
           alt="Travel Diary"
         />
-        <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-          Sign in to your account
-        </h2>
+
       </div>
 
-      <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+      <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm" alt="Form">
+      <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+          Sign in to your account
+        </h2>
         <form className="space-y-6" onSubmit={handleSubmit} method="POST">
           <div>
             <label
               htmlFor="username"
               className="block text-sm font-medium leading-6 text-gray-900"
             >
-              Username:
+              Username
             </label>
             <div className="mt-2">
               <input

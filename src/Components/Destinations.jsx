@@ -1,6 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Destination from "./Destination";
+import Carousel from 'react-bootstrap/Carousel';
+
 
 const API = import.meta.env.VITE_API_URL;
 
@@ -17,16 +19,23 @@ const Destinations = () => {
       });
   }, []);
 
-
+    // <div className="Destinations">
+    //     <section>
+    //   {destinations.map((destination) => {
+    //     return <Destination key={destination.id} destination={destination} />;
+    //   })}
+    //   </section>
+    // </div>
 
   return (
-    <div className="Destinations">
-        <section>
-      {destinations.map((destination) => {
-        return <Destination key={destination.id} destination={destination} />;
-      })}
-      </section>
-    </div>
+    <Carousel>
+
+    {destinations.map((destination) => {
+      return <Destination key={destination.id} destination={destination} />;
+    })}
+
+    </Carousel>
+
   );
 };
 

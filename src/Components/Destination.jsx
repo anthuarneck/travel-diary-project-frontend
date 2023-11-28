@@ -1,15 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Carousel from 'react-bootstrap/Carousel';
+
 
 const Destination = ({ destination}) => {
     return (
-        <div className='Destination'>
-            <h2>{destination.destination_name}</h2>
-            <img src={destination.image_url} alt="image of destination" />
-            <br />
-            <Link to={`/destinations/${destination.id}/memories`}>Link!</Link>
-        </div>
-    );
-}
+ <Carousel.Item interval={3500}>
+    
+        <img src={destination.image_url} text="First slide" />
+        <Carousel.Caption>
+          <h3>{destination.destination_name}</h3>
+          <div>
+          <Link to={`/destinations/${destination.id}/memories`}>Details</Link>
+          </div>
+        </Carousel.Caption>
 
-export default Destination;
+        </Carousel.Item> 
+        );
+    }
+    
+    export default Destination;
+    
+    // <div className='Destination'>
+    //     <h2>{destination.destination_name}</h2>
+    //     <img src={destination.image_url} alt="image of destination" />
+    //     <br />
+    //     <Link to={`/destinations/${destination.id}/memories`}>Link!</Link>
+    // </div>
