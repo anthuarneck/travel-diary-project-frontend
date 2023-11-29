@@ -14,6 +14,8 @@ import Error from "./Pages/Error"
 import SignUp from "./Pages/SignUp"
 import Login from "./Pages/Login"
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
   return (
     <div className="App">

@@ -6,7 +6,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 const Destination = ({ destination}) => {
     return (
- <Carousel.Item>
+ <Carousel.Item interval={3000}>
     
         <img src={destination.image_url} />
         <Carousel.Caption>

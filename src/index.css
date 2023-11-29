@@ -11,7 +11,16 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+}
+
+.Carousel {
+  display: grid;
+  justify-content: center;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
 }
 
 .destinationDetails {
@@ -31,6 +40,10 @@ h3 {
   max-width: 100vh;
 }
 
+.carousel-caption {
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
 
 li {
   list-style: square;
@@ -67,8 +80,6 @@ img[alt="New Memory Image"] {
   box-shadow: 1px 2px 2px;
 }
 
-
-
 .Memory {
   display: grid;
   justify-items: start;
@@ -103,8 +114,16 @@ nav div {
   flex-direction: row;
 }
 
-nav div a {
-  margin-left: 15px;
+.navbar > .container,
+.navbar > .container-fluid,
+.navbar > .container-lg,
+.navbar > .container-md,
+.navbar > .container-sm,
+.navbar > .container-xl,
+.navbar > .container-xxl {
+  display: flex;
+  flex-wrap: inherit;
+  flex-direction: column;
 }
 
 .Brand {
@@ -122,16 +141,6 @@ form textarea {
   margin: 5px 0;
   width: 20vh;
 }
-
-
-
-/* body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-} */
 
 button {
   background-color: #50bfff;

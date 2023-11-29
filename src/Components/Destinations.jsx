@@ -1,8 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Destination from "./Destination";
-import Carousel from 'react-bootstrap/Carousel';
-
+import { Link } from "react-router-dom";
+import Carousel from "react-bootstrap/Carousel";
 
 const API = import.meta.env.VITE_API_URL;
 
@@ -19,24 +19,18 @@ const Destinations = () => {
       });
   }, []);
 
-    // <div className="Destinations">
-    //     <section>
-    //   {destinations.map((destination) => {
-    //     return <Destination key={destination.id} destination={destination} />;
-    //   })}
-    //   </section>
-    // </div>
-
   return (
-    
-    <Carousel>
-
-    {destinations.map((destination) => {
-      return <Destination key={destination.id} destination={destination} />;
-    })}
-
+    <Carousel className="Carousel">
+      {destinations.map((destination) => (
+        <Carousel.Item interval={4000}>
+          <img src={destination.image_url} />
+          <Carousel.Caption>
+            
+          <Link to={`/destinations/${destination.id}/memories`}><h2>{destination.destination_name}</h2></Link>
+          </Carousel.Caption>
+        </Carousel.Item>
+      ))}
     </Carousel>
-
   );
 };
 
