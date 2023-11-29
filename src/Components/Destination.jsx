@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
 
 
+
 const Destination = ({ destination}) => {
     return (
- <Carousel.Item interval={3500}>
+ <Carousel.Item>
     
-        <img src={destination.image_url} text="First slide" />
+        <img src={destination.image_url} />
         <Carousel.Caption>
           <h3>{destination.destination_name}</h3>
           <div>

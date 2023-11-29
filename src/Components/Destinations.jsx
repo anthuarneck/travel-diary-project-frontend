@@ -28,6 +28,7 @@ const Destinations = () => {
     // </div>
 
   return (
+    
     <Carousel>
 
     {destinations.map((destination) => {

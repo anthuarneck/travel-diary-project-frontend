@@ -11,6 +11,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 .destinationDetails {
@@ -20,12 +21,19 @@
   justify-items: start;
 }
 
-.destinationDetails img {
-  box-shadow: 1px 2px 2px;
+h3 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #ffa545;
 }
 
+.destinationDetails img {
+  box-shadow: 1px 2px 2px;
+  max-width: 100vh;
+}
+
+
 li {
-  list-style:square;
+  list-style: square;
 }
 
 div[alt="Login Page"],
@@ -43,7 +51,23 @@ div[alt="Edit Destination Page"] {
 div[alt="Form"] {
   display: grid;
   justify-content: center;
+  border: 2px solid#50bfff;
+  border-radius: 10px;
 }
+
+div[alt="Edit Memory Page"],
+div[alt="New Memory Page"] {
+  display: grid;
+  justify-content: center;
+}
+
+img[alt="Edit Memory Image"],
+img[alt="New Memory Image"] {
+  max-width: 45vh;
+  box-shadow: 1px 2px 2px;
+}
+
+
 
 .Memory {
   display: grid;
@@ -59,7 +83,7 @@ a {
 a:hover {
   color: #ffa545;
 }
-img[alt="Memory Image"]{
+img[alt="Memory Image"] {
   max-width: 50vh;
   box-shadow: 1px 2px 2px;
 }
@@ -68,11 +92,8 @@ form fieldset input {
   cursor: pointer;
 }
 
-
-
 nav {
-  border-bottom: 1px solid #1a1a1a;
-
+  border-bottom: 1px solid #50bfff;
 }
 
 nav div {
@@ -88,11 +109,9 @@ nav div a {
 
 .Brand {
   font-size: xx-large;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: #ffa545
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #ffa545;
 }
-
-
 
 form fieldset,
 form input,
@@ -104,6 +123,8 @@ form textarea {
   width: 20vh;
 }
 
+
+
 /* body {
   margin: 0;
   display: flex;
@@ -111,6 +132,10 @@ form textarea {
   min-width: 320px;
   min-height: 100vh;
 } */
+
+button {
+  background-color: #50bfff;
+}
 
 h1 {
   font-size: 3.2em;
@@ -129,7 +154,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #ffa545
+  border-color: #ffa545;
 }
 button:focus,
 button:focus-visible {
@@ -142,7 +167,7 @@ button:focus-visible {
     background-color: #ffffff;
   }
   a:hover {
-    color: #ffa545
+    color: #ffa545;
   }
   button {
     background-color: #f9f9f9;

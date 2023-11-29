@@ -55,8 +55,8 @@ const NewMemoryForm = () => {
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
             className="mx-auto h-10 w-auto"
-            src=""
-            alt="Travel Diary"
+            src="https://cdn.shopify.com/s/files/1/1372/9161/files/travel2.jpg?v=1670203277"
+            alt="New Memory Image"
           />
   
         </div>
