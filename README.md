@@ -11,6 +11,8 @@ Travel Diary is a web application that allows users to create and manage their t
   - [Destinations](#destinations)
   - [Memories](#memories)
   - [Navigation](#navigation)
+- [Stretch Goals](#stretch-goals)
+- [Links](#links)
 
 ## Getting Started
 
@@ -49,3 +51,16 @@ Before you begin, make sure you have the following prerequisites installed:
 -  At the top of each page, there is a navigation bar (NavBar) that provides convenient links.
 - The NavBar includes links to return to the Destination Page, add a new destination, and sign in or sign out.
 - If you are signed in, "Sign Out" will appear on the NavBar. If you are signed out, "Sign In" will appear on the NavBar.
+
+## Stretch Goals
+
+This app implements user authorization features which allows a user to properly register an account with the app and login.
+
+This app utilizes React Bootstrap components.
+
+## Links
+
+- [FrontEnd](https://travel-diary-app.netlify.app/)
+- [BackEnd](https://travel-diary-app-odc3.onrender.com/)
+- [GitHub FrontEnd](https://github.com/anthuarneck/travel-diary-project-frontend)
+- [GitHub BackEnd](https://github.com/anthuarneck/travel-diary-project-backend)
