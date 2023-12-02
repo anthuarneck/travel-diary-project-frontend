@@ -36,10 +36,6 @@ export const AuthProvider = (props) => {
       });
   };
   
-  // useEffect(() => {
-  //   console.log("User data after state update:", user);
-  // }, [user]);
-
   const value = {
     loginUser,
     user,

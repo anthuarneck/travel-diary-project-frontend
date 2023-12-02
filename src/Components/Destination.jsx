@@ -22,9 +22,3 @@ const Destination = ({ destination}) => {
     
     export default Destination;
     
-    // <div className='Destination'>
-    //     <h2>{destination.destination_name}</h2>
-    //     <img src={destination.image_url} alt="image of destination" />
-    //     <br />
-    //     <Link to={`/destinations/${destination.id}/memories`}>Link!</Link>
-    // </div>

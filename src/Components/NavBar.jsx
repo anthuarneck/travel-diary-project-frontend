@@ -7,20 +7,6 @@ import Navbar from "react-bootstrap/Navbar";
 
 const NavBar = () => {
   const { user } = useAuth();
-  // <nav>
-  //   <h1>Travel Diary</h1>
-  //   <h3>
-  //     <Link to="/destinations">Destinations</Link>
-  //   </h3>
-  //   <button>
-  //     <Link to="/destinations/new">Add a Destination</Link>
-  //   </button>
-  //   {user.id ? (
-  //     <button>
-  //       <Link to="/">Logout</Link>
-  //     </button>
-  //   ) : null}
-  // </nav>
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
